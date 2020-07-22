@@ -1,0 +1,17 @@
+.profile__btn {
+  border: none;
+  padding: 0;
+  background-color: initial;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity .5s ease;
+}
+
+.profile__btn:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+.profile__btn:focus {
+  outline: none;
+}

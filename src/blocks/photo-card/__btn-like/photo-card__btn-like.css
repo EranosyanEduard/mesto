@@ -1,0 +1,20 @@
+.photo-card__btn-like {
+  border: none;
+  padding: 0;
+  background-color: initial;
+  width: 20px;
+  height: 18px;
+  background-image: url(../../../images/photo-card/button-like-card-off.svg);
+  background-size: contain;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.photo-card__btn-like:hover {
+  transform: scale(1.2);
+  opacity: .6;
+  cursor: pointer;
+}
+
+.photo-card__btn-like:focus {
+  outline: none;
+}

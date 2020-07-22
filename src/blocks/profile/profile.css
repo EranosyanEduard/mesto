@@ -1,0 +1,23 @@
+@import url(./__card/profile__card.css);
+@import url(./__user-pic-container/profile__user-pic-container.css);
+@import url(./__user-pic/profile__user-pic.css);
+@import url(./__info/profile__info.css);
+@import url(./__title/profile__title.css);
+@import url(./__btn/profile__btn.css);
+@import url(./__btn/_feat/profile__btn_feat_edit-info.css);
+@import url(./__btn/_feat/profile__btn_feat_add-card.css);
+@import url(./__subtitle/profile__subtitle.css);
+
+.profile {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 667px) {
+  .profile {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

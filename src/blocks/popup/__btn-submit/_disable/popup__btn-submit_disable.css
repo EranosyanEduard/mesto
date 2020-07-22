@@ -1,0 +1,5 @@
+.popup__btn-submit_disable {
+  background: inherit;
+  color: #000;
+  opacity: .2;
+}

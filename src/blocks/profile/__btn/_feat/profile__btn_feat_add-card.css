@@ -1,0 +1,14 @@
+.profile__btn_feat_add-card {
+  width: 100%;
+  max-width: calc(282px * 1.333);
+  height: 50px;
+  background-image: url(../../../../images/profile/button-add-card.svg);
+  border: 2px solid #fff;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 667px) {
+  .profile__btn_feat_add-card {
+    width: 150px;
+  }
+}

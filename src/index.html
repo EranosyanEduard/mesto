@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контрольная работа в рамках курса по JavaScript">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Ераносян Эдуард">
+  <title>Mesto: Russia</title>
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="page">
+  <header class="page__main-section header">
+    <img src="./images/header/logo.svg" alt="Логотип проекта" class="header__logo">
+  </header>
+
+  <main class="page__main-section content">
+    <section class="profile">
+      <div class="profile__card">
+        <div class="profile__user-pic-container">
+          <img src="#" alt="Аватар (графическое представление) пользователя"
+               class="profile__user-pic">
+        </div>
+        <div class="profile__info">
+          <h1 class="profile__title">Имя пользователя</h1>
+          <button type="button" class="profile__btn profile__btn_feat_edit-info"></button>
+          <p class="profile__subtitle">Информация о пользователе</p>
+        </div>
+      </div>
+
+      <button type="button" class="profile__btn profile__btn_feat_add-card"></button>
+    </section>
+
+    <section class="cards">
+      <ul class="cards__list"></ul>
+    </section>
+  </main>
+
+  <footer class="page__main-section footer">
+    <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+  </footer>
+
+  <!-- БЭМ-блок "popup", модифицируемый посредством классов popup_type_user-info и popup_type_card-info, обеспечивает работу всплывающих окон, вызываемых с помощью интерактивных элементов (кнопок) БЭМ-блока profile -->
+  <div class="popup popup_type_user-info" tabindex="-1">
+    <form action="#" class="popup__form popup__form_height_large" novalidate>
+      <button type="button" class="popup__btn-close"></button>
+
+      <fieldset class="popup__fieldset">
+        <legend class="popup__legend">Редактировать профиль</legend>
+        <!-- popup__input-container не является "лишней оберткой", поскольку его наличие обусловлено следующими причинами: желанием использовать CSS-правило { display: flex; } и особенностью CHROMIUM-браузеров, заключающейся в том, что HTML-элемент fieldset "не воспринимает" такое правило -->
+        <div class="popup__input-container">
+          <label for="popup-input-user-name">
+            <input type="text" class="popup__input" id="popup-input-user-name" maxlength="40" minlength="2"
+                   name="userName" pattern="[a-zA-Zа-яА-ЯёЁ -]+" placeholder="Имя пользователя" required>
+            <span class="popup__error" id="popup-input-user-name-error"></span>
+          </label>
+          <label for="popup-input-user-detail">
+            <input type="text" class="popup__input" id="popup-input-user-detail" maxlength="200" minlength="2"
+                   name="userDetail" placeholder="Информация о пользователе" required>
+            <span class="popup__error" id="popup-input-user-detail-error"></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="popup__btn-submit">Сохранить</button>
+    </form>
+  </div>
+
+  <div class="popup popup_type_card-info" tabindex="-1">
+    <form action="#" class="popup__form popup__form_height_large" novalidate>
+      <button type="button" class="popup__btn-close"></button>
+
+      <fieldset class="popup__fieldset">
+        <legend class="popup__legend">Новое место</legend>
+        <!-- popup__input-container не является "лишней оберткой", поскольку его наличие обусловлено следующими причинами: желанием использовать CSS-правило { display: flex; } и особенностью CHROMIUM-браузеров, заключающейся в том, что HTML-элемент fieldset "не воспринимает" такое правило -->
+        <div class="popup__input-container">
+          <label for="popup-input-card-name">
+            <input type="text" class="popup__input" id="popup-input-card-name" maxlength="30" minlength="1"
+                   name="cardName" pattern="[a-zA-Zа-яА-ЯёЁ -]+" placeholder="Название места" required>
+            <span class="popup__error" id="popup-input-card-name-error"></span>
+          </label>
+          <label for="popup-input-card-detail">
+            <input type="url" class="popup__input" id="popup-input-card-detail" name="cardDetail"
+                   placeholder="Ссылка на изображение" required>
+            <span class="popup__error" id="popup-input-card-detail-error"></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="popup__btn-submit">Создать</button>
+    </form>
+  </div>
+
+  <!-- БЭМ-блок "popup", модифицируемый посредством класса popup_type_card-image, обеспечивает работу всплывающего окна, вызываемого с помощью интерактивного элемента (изображения) БЭМ-блока photo-card -->
+  <div class="popup popup_type_card-image" tabindex="-1">
+    <div class="popup__image-container">
+      <button type="button" class="popup__btn-close"></button>
+
+      <img src="#" alt="#" class="popup__image">
+      <p class="popup__image-caption"></p>
+    </div>
+  </div>
+
+  <div class="popup popup_type_confirmation-remove-card" tabindex="-1">
+    <form action="#" class="popup__form popup__form_height_small">
+      <button type="button" class="popup__btn-close"></button>
+      <h2 class="popup__legend">Вы уверены?</h2>
+      <button type="submit" class="popup__btn-submit">Да</button>
+    </form>
+  </div>
+
+  <div class="popup popup_type_user-pic" tabindex="-1">
+    <form action="#" class="popup__form popup__form_height_medium">
+      <button type="button" class="popup__btn-close"></button>
+
+      <fieldset class="popup__fieldset">
+        <legend class="popup__legend">Обновить аватар</legend>
+        <div class="popup__input-container">
+          <label for="popup-input-user-pic-link">
+            <input type="url" name="userPicLink" id="popup-input-user-pic-link" class="popup__input"
+                   placeholder="Ссылка на изображение" required>
+            <span class="popup-error" id="popup-input-user-pic-link-error"></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="popup__btn-submit">Сохранить</button>
+    </form>
+  </div>
+</div>
+
+<template id="photo-card-template">
+  <li class="cards__item photo-card">
+    <button type="button" class="photo-card__btn-remove"></button>
+
+    <img src="#" alt="#" class="photo-card__image">
+
+    <div class="photo-card__caption">
+      <h2 title="" class="photo-card__title"></h2>
+      <div class="photo-card__like-container">
+        <button type="button" class="photo-card__btn-like"></button>
+        <span class="photo-card__like-counter"></span>
+      </div>
+    </div>
+  </li>
+</template>
+</body>
+</html>

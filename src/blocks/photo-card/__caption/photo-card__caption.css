@@ -1,0 +1,6 @@
+.photo-card__caption {
+  flex-basis: 21.884%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

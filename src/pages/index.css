@@ -1,0 +1,20 @@
+/* [general page style] */
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/inter/inter.css);
+@import url(../blocks/page/page.css);
+
+/* [header] */
+@import url(../blocks/header/header.css);
+
+/* [main] */
+@import url(../blocks/content/content.css);
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/photo-card/photo-card.css);
+
+/* [footer] */
+@import url(../blocks/footer/footer.css);
+
+/* [popups] */
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_opened/popup_opened.css);

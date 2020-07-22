@@ -1,0 +1,28 @@
+@import url(./__main-section/page__main-section.css);
+
+.page {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 300px;
+  min-height: 100vh;
+  padding-top: 28px;
+  padding-bottom: 36px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+@media screen and (min-width: 768px) {
+  .page {
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+}

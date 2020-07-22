@@ -1,0 +1,19 @@
+.profile__info {
+  margin-bottom: 36px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  grid-gap: 15px 1px;
+  justify-items: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 667px) {
+  .profile__info {
+    margin: 0;
+    grid-template-columns: fit-content(calc(100% - 30px)) 30px;
+    grid-column-gap: 15px;
+    justify-items: start;
+    width: calc(100% - 150px);
+  }
+}

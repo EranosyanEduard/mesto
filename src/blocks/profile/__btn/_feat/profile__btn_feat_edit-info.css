@@ -1,0 +1,13 @@
+.profile__btn_feat_edit-info {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../../../images/profile/button-edit-info.svg);
+  border: 1px solid #fff;
+}
+
+@media screen and (min-width: 1000px) {
+  .profile__btn_feat_edit-info {
+    width: 24px;
+    height: 24px;
+  }
+}

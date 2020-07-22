@@ -1,0 +1,38 @@
+@import url(./_type/popup_type_user-pic.css);
+@import url(./_type/popup_type_user-info.css);
+@import url(./_type/popup_type_card-info.css);
+@import url(./_type/popup_type_card-image.css);
+@import url(./_type/popup_type_confirmation-remove-card.css);
+@import url(./__form/popup__form.css);
+@import url(./__form/_height/popup__form_height_small.css);
+@import url(./__form/_height/popup__form_height_medium.css);
+@import url(./__form/_height/popup__form_height_large.css);
+@import url(./__btn-close/popup__btn-close.css);
+@import url(./__fieldset/popup__fieldset.css);
+@import url(./__legend/popup__legend.css);
+@import url(./__input-container/popup__input-container.css);
+@import url(./__input/popup__input.css);
+@import url(./__input/_invalid/popup__input_invalid.css);
+@import url(./__error/popup__error.css);
+@import url(./__error/_visible/popup__error_visible.css);
+@import url(./__btn-submit/popup__btn-submit.css);
+@import url(./__btn-submit/_disable/popup__btn-submit_disable.css);
+@import url(./__image-container/popup__image-container.css);
+@import url(./__image/popup__image.css);
+@import url(./__image-caption/popup__image-caption.css);
+
+.popup {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s, opacity .5s;
+}
+
+.popup:focus {
+  outline: none;
+}
